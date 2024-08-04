@@ -18,6 +18,7 @@ package com.alibaba.csp.sentinel.dashboard.controller.gateway;
 import com.alibaba.csp.sentinel.dashboard.auth.AuthAction;
 import com.alibaba.csp.sentinel.dashboard.auth.AuthService;
 import com.alibaba.csp.sentinel.dashboard.client.SentinelApiClient;
+import com.alibaba.csp.sentinel.dashboard.client.SentinelNacosApiClient;
 import com.alibaba.csp.sentinel.dashboard.datasource.entity.gateway.ApiDefinitionEntity;
 import com.alibaba.csp.sentinel.dashboard.datasource.entity.gateway.ApiPredicateItemEntity;
 import com.alibaba.csp.sentinel.dashboard.discovery.MachineInfo;
@@ -54,7 +55,7 @@ public class GatewayApiController {
     private InMemApiDefinitionStore repository;
 
     @Autowired
-    private SentinelApiClient sentinelApiClient;
+    private SentinelNacosApiClient sentinelApiClient;
 
     @GetMapping("/list.json")
     @AuthAction(AuthService.PrivilegeType.READ_RULE)

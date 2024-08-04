@@ -19,7 +19,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.alibaba.csp.sentinel.dashboard.auth.AuthAction;
-import com.alibaba.csp.sentinel.dashboard.client.SentinelApiClient;
+import com.alibaba.csp.sentinel.dashboard.client.SentinelNacosApiClient;
 import com.alibaba.csp.sentinel.dashboard.discovery.AppManagement;
 import com.alibaba.csp.sentinel.dashboard.discovery.MachineInfo;
 import com.alibaba.csp.sentinel.dashboard.auth.AuthService.PrivilegeType;
@@ -58,7 +58,7 @@ public class DegradeController {
     @Autowired
     private RuleRepository<DegradeRuleEntity, Long> repository;
     @Autowired
-    private SentinelApiClient sentinelApiClient;
+    private SentinelNacosApiClient sentinelApiClient;
     @Autowired
     private AppManagement appManagement;
 

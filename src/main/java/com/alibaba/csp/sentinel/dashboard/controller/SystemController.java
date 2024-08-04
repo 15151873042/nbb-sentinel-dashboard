@@ -20,6 +20,7 @@ import java.util.List;
 
 import com.alibaba.csp.sentinel.dashboard.auth.AuthAction;
 import com.alibaba.csp.sentinel.dashboard.auth.AuthService.PrivilegeType;
+import com.alibaba.csp.sentinel.dashboard.client.SentinelNacosApiClient;
 import com.alibaba.csp.sentinel.dashboard.discovery.AppManagement;
 import com.alibaba.csp.sentinel.dashboard.repository.rule.RuleRepository;
 import com.alibaba.csp.sentinel.util.StringUtil;
@@ -48,7 +49,7 @@ public class SystemController {
     @Autowired
     private RuleRepository<SystemRuleEntity, Long> repository;
     @Autowired
-    private SentinelApiClient sentinelApiClient;
+    private SentinelNacosApiClient sentinelApiClient;
     @Autowired
     private AppManagement appManagement;
 

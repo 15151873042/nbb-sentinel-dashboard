@@ -23,6 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 import com.alibaba.csp.sentinel.dashboard.auth.AuthAction;
 import com.alibaba.csp.sentinel.dashboard.auth.AuthService.PrivilegeType;
+import com.alibaba.csp.sentinel.dashboard.client.SentinelNacosApiClient;
 import com.alibaba.csp.sentinel.dashboard.discovery.AppManagement;
 import com.alibaba.csp.sentinel.util.StringUtil;
 
@@ -62,7 +63,7 @@ public class FlowControllerV1 {
     private AppManagement appManagement;
 
     @Autowired
-    private SentinelApiClient sentinelApiClient;
+    private SentinelNacosApiClient sentinelApiClient;
 
     @GetMapping("/rules")
     @AuthAction(PrivilegeType.READ_RULE)
